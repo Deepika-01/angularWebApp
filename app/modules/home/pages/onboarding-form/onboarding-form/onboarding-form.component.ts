@@ -219,7 +219,7 @@ export class OnboardingFormComponent implements OnInit {
 
         setTimeout(
           function(){ 
-          // location.reload(); 
+          location.reload(); 
           this.router.navigateByUrl('/list');
           }, 2000);
         
