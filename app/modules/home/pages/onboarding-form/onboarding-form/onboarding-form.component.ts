@@ -219,9 +219,8 @@ export class OnboardingFormComponent implements OnInit {
 
         setTimeout(
           function(){ 
-          location.reload(); 
-          this.router.navigateByUrl('/list');
-          }, 2000);
+            this.router.navigateByUrl("/list");
+          }, 1000);
         
       }else{
         console.log('a mandatory doc is not checked')
