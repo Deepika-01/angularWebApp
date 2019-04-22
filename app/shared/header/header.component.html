@@ -1,0 +1,22 @@
+<!-- Displays the icon and name of the user -->
+<mat-toolbar>
+  <mat-toolbar-row>
+    <a mat-stroked-button matTooltip="Home" class="navbar-brand" href="/onboard">
+      <img src="assets/images/backpack.jpg" alt="Logo" >
+    </a>
+    <span class="example-fill-remaining-space"></span>
+    <span mat-color="{color:'primary'}">{{username}}</span>
+
+
+    <button mat-button [matMenuTriggerFor]="menu" mat-mini-fab matTooltip="Account Info" style="margin-left:1%">
+        <mat-icon color="primary" class="icon" aria-hidden="false" aria-label="user account circle">
+            account_circle
+          </mat-icon>
+    </button>
+    <mat-menu #menu="matMenu"> 
+      <a mat-menu-item style="width: 100%;" (click)="logout()"> Logout</a>
+    </mat-menu>
+
+    
+  </mat-toolbar-row>
+</mat-toolbar>

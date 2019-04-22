@@ -1,0 +1,55 @@
+{
+    "students": [
+        {
+            "id" : 1,
+            "name" :"John",
+            "documentsList": [
+                {"name": "domicile", "mandatory": true, "isChecked": true},
+                {"name": "birth_certificate", "mandatory": true, "isChecked": true},
+                {"name": "marksheets", "mandatory": true, "isChecked": true},
+                {"name": "police_clearance", "mandatory": true, "isChecked": true},
+                {"name": "passport", "mandatory": true, "isChecked": true},
+                {"name": "declaration", "mandatory": true, "isChecked": true}
+            ],
+            "category" : "International",
+            "dob" : "1996-11-28",
+            "father_name": "Robert",
+            "marks" : "80",
+            "mother_name" : "Sara"
+        },
+        {
+            "id" : 2,
+            "name" :"Adam",
+            "documentsList": [
+                {"name": "domicile", "mandatory": true, "isChecked": true},
+                {"name": "birth_certificate", "mandatory": true, "isChecked": true},
+                {"name": "marksheets", "mandatory": true, "isChecked": true},
+                {"name": "police_clearance", "mandatory": true, "isChecked": true},
+                {"name": "passport", "mandatory": true, "isChecked": true},
+                {"name": "declaration", "mandatory": true, "isChecked": true}
+            ],
+            "category" : "International",
+            "dob" : "2000-01-02",
+            "father_name": "Mark",
+            "marks" : "80",
+            "mother_name" : "Alice"
+        },
+        {
+            "id" : 3,
+            "name" :"Abhishek",
+            "documentsList": [
+                {"name": "domicile", "mandatory": true, "isChecked": true},
+                {"name": "birth_certificate", "mandatory": true, "isChecked": true},
+                {"name": "marksheets", "mandatory": true, "isChecked": true},
+                {"name": "police_clearance", "mandatory": false, "isChecked": false},
+                {"name": "passport", "mandatory": false, "isChecked": true},
+                {"name": "declaration", "mandatory": true, "isChecked": true}
+            ],
+            "category" : "Domestic",
+            "dob" : "1992-07-28",
+            "father_name": "Gaurav",
+            "marks" : "80",
+            "mother_name" : "Astha"
+        }
+    ]
+}

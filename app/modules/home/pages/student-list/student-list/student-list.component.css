@@ -1,0 +1,30 @@
+a {
+    margin: 0.2%;
+    color: white;
+}
+
+a:hover {
+    background-color: white;
+    color: slateblue;
+}
+
+.active{
+    background-color: white;
+    color: slateblue;
+}
+
+button{
+    margin: 1%;
+}
+
+#studentListHeader{
+    width:100%;
+    text-align: center;
+    margin-top: 1%;
+    margin-bottom: 2%;
+}
+
+#studentListCard{
+    width:100%;
+    height: 100%
+}

@@ -1,0 +1,22 @@
+<mat-toolbar color="primary">
+    <a class="nav-link" routerLink="/onboard">OnBoardForm</a>
+    <a class="nav-link active" routerLink="/list">StudentList</a>
+</mat-toolbar>
+
+<div id = "studentListHeader">
+    <div style="float:left; width:50%">
+        <select id="category" style="width:30%;" (change)="onCategorySelection($event.target.value)">
+          <option *ngFor="let category of categories;let i=index" value="{{i}}">
+            {{category}}
+          </option>
+        </select>
+      </div>
+      
+      <div style="float: right;width: 50%;">
+        <input type="text" style="text-align:center;" placeholder="search student" [(ngModel)] = "searchText" matTooltip="Search the name of the student">
+      </div>
+</div>
+
+<div id="studentListCard">
+    <app-student-list-card *ngFor="let student of studentsToShow | filter:searchText" [student]="student"></app-student-list-card>
+</div>

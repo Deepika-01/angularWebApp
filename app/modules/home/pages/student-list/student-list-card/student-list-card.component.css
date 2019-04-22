@@ -1,0 +1,13 @@
+.card{
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    width:25%;
+    float: left;
+    padding: 2%;
+    margin: 3%;
+}
+
+button{
+    background-color: white; 
+    color: black; 
+    border: 2px solid #e7e7e7;
+}

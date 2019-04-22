@@ -1,0 +1,11 @@
+/* Displays footer for the application */
+footer{
+    background-color: dimgrey;
+    color: white;
+    text-align: center;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    font-size: 18px;
+    padding: 1%;
+}

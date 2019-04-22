@@ -1,0 +1,11 @@
+<div>
+  <div class="card">
+    <label *ngIf='student.category == "International"' style="color:royalblue; text-align:center;">{{student.category}}</label>
+    <label *ngIf='student.category == "Domestic"' style="color:deeppink; text-align:center;">{{student.category}}</label>
+    <label>Name: {{student.name}}</label>
+    <label>Marks: {{student.marks}}</label>
+    <button mat-stroked-button [routerLink]="['/onboard/view',student.id]" matTooltip="Click to view the details">View</button>
+    <button mat-stroked-button [routerLink]="['/onboard/edit',student.id]" matTooltip="Click to update the details">Edit</button>
+    <button mat-stroked-button (click)="delete()" matTooltip="click to delete the details">Delete</button>
+  </div>
+</div>

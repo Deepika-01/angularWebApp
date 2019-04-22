@@ -1,0 +1,54 @@
+{
+    "domestic" :[
+        {
+            "name" : "domicile", 
+            "mandatory" : true
+        },
+        {
+            "name" : "birth_certificate", 
+            "mandatory" : true
+        },
+        {
+            "name" : "marksheets", 
+            "mandatory" : true
+        },
+        {
+            "name" : "police_clearance", 
+            "mandatory" : false
+        },
+        {
+            "name" : "passport", 
+            "mandatory" : false
+        },
+        {
+            "name" : "declaration", 
+            "mandatory" : true
+        }
+    ],
+    "international" : [
+        {
+            "name" : "domicile", 
+            "mandatory" : true
+        },
+        {
+            "name" : "birth_certificate", 
+            "mandatory" : true
+        },
+        {
+            "name" : "marksheets", 
+            "mandatory" : true
+        },
+        {
+            "name" : "police_clearance", 
+            "mandatory" : true
+        },
+        {
+            "name" : "passport", 
+            "mandatory" : true
+        },
+        {
+            "name" : "declaration", 
+            "mandatory" : true
+        }
+    ]
+}

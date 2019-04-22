@@ -1,0 +1,60 @@
+<mat-toolbar color="primary">
+    <a class="nav-link active" routerLink="/onboard">OnBoardForm</a>
+    <a class="nav-link" routerLink="/list">StudentList</a>
+</mat-toolbar>
+
+<form [formGroup]="onboardForm" (ngSubmit)="insert()">
+    <mat-form-field>
+        <input matInput id="username" placeholder="Student name" formControlName="username">
+        <mat-error *ngIf="onboardForm.controls['username'].invalid && (onboardForm.controls['username'].dirty || onboardForm.controls['username'].touched)">
+            Please enter a valid name with only letter(a-z)
+        </mat-error>
+    </mat-form-field>
+    
+    <mat-select style="margin:1%;" placeholder="Category of Student" formControlName="category" (selectionChange)="onCategorySelection()" matTooltip="Select the category of the applicant">
+        <mat-option *ngFor="let category of categories" value="{{category.name}}">
+            {{category.name}}
+        </mat-option>
+    </mat-select><br/><br/>
+    
+    <label matTooltip="Select the documents presented by the applicant">Documents:</label>
+    <div *ngFor="let control of documentArray.controls; let i=index">
+        <mat-checkbox color="primary" [formControl]="control">
+            {{documentsToShow[i].name}}
+            <label *ngIf="documentsToShow[i].mandatory">*</label>
+        </mat-checkbox>
+    </div>
+    <mat-error *ngIf="!validCheckboxes">
+        a mandatory document is not checked
+    </mat-error>
+    
+    <mat-form-field>
+        <input [min]="minDate" [max]="maxDate" style="width:96%;margin-bottom: 1%;margin-top: 1%;" matInput [matDatepicker]="picker" placeholder="Choose a date" formControlName="dob" matTooltip="Enter the date of birth of the applicant">
+        <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+        <mat-datepicker #picker></mat-datepicker>
+    </mat-form-field>
+    
+    <mat-form-field>
+        <input matInput id="father_name" placeholder="Father's name" formControlName="father_name">
+        <mat-error *ngIf="onboardForm.controls['father_name'].invalid && (onboardForm.controls['father_name'].dirty || onboardForm.controls['father_name'].touched)">
+            Please enter a valid name with only letter(a-z)
+        </mat-error>
+    </mat-form-field>
+    
+    <mat-form-field>
+        <input matInput id="mother_name" placeholder="Mother's name" formControlName="mother_name">
+        <mat-error *ngIf="onboardForm.controls['mother_name'].invalid && (onboardForm.controls['mother_name'].dirty || onboardForm.controls['mother_name'].touched)">
+            Please enter a valid name with only letter(a-z)
+        </mat-error>
+    </mat-form-field>
+    
+    <mat-form-field>
+        <input matInput id="marks" type="number" placeholder="% Marks" formControlName="marks">
+        <mat-error *ngIf="onboardForm.controls['marks'].invalid && (onboardForm.controls['marks'].dirty || onboardForm.controls['marks'].touched)">
+            Please enter a valid number between 1-100
+        </mat-error>
+    </mat-form-field>
+    
+    <button mat-raised-button color="accent" type="submit" [disabled]="!onboardForm.valid">ONBOARD</button>
+    
+</form>

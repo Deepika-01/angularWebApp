@@ -1,0 +1,20 @@
+<div style="padding: 4%">
+  <div id="imgdiv">
+    <img src="assets/images/login.png" width="100%">
+  </div>
+  
+  <div class="example-container">
+    <form [formGroup]="loginForm"  (ngSubmit)="login()">
+      <mat-form-field style="width: 100%;">
+        <input matInput type="text" formControlName="username" placeholder="username">
+      </mat-form-field><br/>
+      <mat-form-field style="width: 100%;">
+        <input matInput type="password" formControlName="password" placeholder="password">
+      </mat-form-field>
+      <div>
+        <button mat-raised-button color="accent" [disabled]="!loginForm.valid">LOGIN</button>
+        <button mat-raised-button color="accent" (click)="reset()">RESET</button>
+      </div>
+    </form>
+  </div>
+</div>
