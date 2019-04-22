@@ -22,7 +22,7 @@ import { DocumentService } from './../../../shared/services/document/document.se
 export class OnboardingFormComponent implements OnInit {
   
   minDate = new Date(1992, 0, 1)
-  maxDate = new Date(2000, 0, 1)
+  maxDate = new Date(2000, 31, 12)
   regexForNames = "^[a-zA-Z]+(([ ][a-zA-Z])?[a-zA-Z]*)*$"
 
   onboardForm : FormGroup;
@@ -215,12 +215,14 @@ export class OnboardingFormComponent implements OnInit {
         let matSnackBarConfig = new MatSnackBarConfig();
         matSnackBarConfig.horizontalPosition = "center";
         matSnackBarConfig.verticalPosition = "top";
-        this.snackbar.open("Successfully inserted a student record","", matSnackBarConfig)
+        this.snackbar.open("Successfully inserted a student record","", matSnackBarConfig);
 
-        setTimeout(
-          function(){ 
-            this.router.navigateByUrl("/list");
-          }, 1000);
+        this.router.navigateByUrl("/list");
+
+        // setTimeout(
+        //   function(){ 
+            
+        //   }, 1000);
         
       }else{
         console.log('a mandatory doc is not checked')
