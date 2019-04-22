@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { FormGroup, Validators, FormBuilder, FormArray } from '@angular/forms';
 import { MatSnackBar, MatSnackBarConfig } from '@angular/material';
 
@@ -47,7 +47,8 @@ export class OnboardingFormComponent implements OnInit {
     private formBuilder : FormBuilder,
     private studentService : StudentService,
     private documentService: DocumentService,
-    private snackbar: MatSnackBar
+    private snackbar: MatSnackBar,
+    private router: Router
     ) { }
     
     ngOnInit() {
@@ -218,7 +219,8 @@ export class OnboardingFormComponent implements OnInit {
 
         setTimeout(
           function(){ 
-          location.reload(); 
+          // location.reload(); 
+          this.router.navigateByUrl('/list');
           }, 2000);
         
       }else{
