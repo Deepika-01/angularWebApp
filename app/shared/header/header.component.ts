@@ -23,10 +23,6 @@ export class HeaderComponent implements OnInit {
     this.username = localStorage.getItem("authenticated");
   }
 
-  goToHome(){
-    this.router.navigateByUrl('/login');
-  }
-
   /* Logs out the user by removing the username from the local storage */
   logout(){
     this.localStorageService.removeFromLocalStorage("authenticated");
