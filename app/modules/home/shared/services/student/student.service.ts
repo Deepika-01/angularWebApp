@@ -80,6 +80,19 @@ export class StudentService {
       this.localStorageService.storeInLocalStorage(this.key, data);
       
     }
+
+    /* Deletes a student in the local storage
+    * @param: an instance of Student class
+    */
+   deleteLocalStorage(student : IStudent){
+    var students = this.fetchAllStudents();
+    var id : number = student.id as number;
+    students.splice(id-1,1);
+    this.localStorageService.removeFromLocalStorage(this.key);
+    var data = JSON.stringify(students);
+    this.localStorageService.storeInLocalStorage(this.key, data);
+    
+  }
     
   }
   

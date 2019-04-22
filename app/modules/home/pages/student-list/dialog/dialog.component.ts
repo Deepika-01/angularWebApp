@@ -27,7 +27,7 @@ export class DialogComponent implements OnInit {
 
   /* deleted the user from the local storage */
   delete(){
-    this.studentService.updateLocalStorage(this.data as IStudent);
+    this.studentService.deleteLocalStorage(this.data as IStudent);
     this.closeDialog();
     location.reload();
     }
